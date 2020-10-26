@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+html, body{
+    background:rgb(107, 107, 107);
+}
+
+.container{
+	padding: 0 2%;
+	margin: 0 auto;
+}
+
+.clear{clear: both;}
+form{
+    width: 520px;
+    margin: 0 auto;
+    margin-top: 1%;
+    padding: 20px;
+    height: auto;
+    background-color: rgb(247,247, 247);;
+    color: rgb(0, 0, 0);font-weight: 500;
+    font-size: 1.6rem;
+    border-radius: 20px;
+}
+
+label,
+input{
+    margin: 10px;
+}
+
+.email,
+.senha{
+    width: 95%;
+    height: 40px;
+    border: 2px solid rgb(247,247, 247);
+    border-bottom: 2px solid rgb(0, 0, 0);
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    background-color: rgb(247,247, 247);
+    outline: none;
+}
+
+.button{
+    height: 40px;
+    width: 96%;
+    background-color: green;
+    border: 3px solid white;
+    outline: none;
+    font-weight: 600;
+    border-radius: 50px;
+    font-size: 20px;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+}
+
+.button:hover{
+    border: 3px solid rgb(233, 233, 233);
+}
+
+form p{
+    display: inline-flex;
+    font-size: 10px; 
+    padding-left: 40px;
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+}
+form p:hover{
+    text-decoration: underline;
+}
+
+
+@media screen and (max-width: 768px){
+    form{
+        margin-top:10%;
+        width: 100%;
+    }
+    .button{
+        width: 93%;
+        text-align: center;
+    }
+    form p{
+        padding-left: 30px;
+    }
+    
+}

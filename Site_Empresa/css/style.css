@@ -1,0 +1,196 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+body{
+    background-color: rgb(255, 255, 255);
+    height: auto;
+}
+/* Classes Axuliares */
+.container{
+	max-width: 960px;
+	padding: 0 2%;
+	margin:0 auto;
+}
+
+.clear{clear: both;}
+
+/* Main */
+main{
+    width: 85%;
+    background-color: rgb(253, 253, 253);
+    border-radius: 30px 30px 0px 0px;
+    margin: 0px auto;
+    margin-top: -60px;
+}
+.des-pag{
+    text-align: center;
+    padding: 20px;
+}
+.des-pag h2{
+    font-size: 40px;
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+}
+section.cards{
+	padding:30px 0;
+}
+
+.card-single{
+	width: 33.3%;
+	float: left;
+    padding:15px;
+}
+
+.card-single img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.card-single h3{
+    margin-top: 5px;
+    text-align: center;
+	font-weight: lighter;
+    font-size: 19px;
+    color: #999999;
+}
+
+.card-single button{
+    width: 100%;
+    margin-top: 10px;
+    height: 50px;
+    color: white;
+    background: rgb(0, 165, 36);
+    cursor: pointer;
+    border: none;
+    border-radius: 50px;
+}
+.card-single button a{
+    text-decoration: none; 
+    color: white;
+    font-weight: 600;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.card-single button:hover{
+ background: rgb(0, 204, 44);
+}
+.card-single button a:hover{
+    background: rgb(0, 204, 44);
+   }
+.quem-somos{
+    width: 95%;
+    height: 330px;
+    margin: 0 auto;
+    background-color: rgb(255, 255, 255);
+    display: inline-flex;
+    position: relative;
+}
+
+.quem-somos img{
+    width: 410px;
+    height: 330px;
+}
+
+.quem-somos img-quem{
+    background: url(img/about-img.jpg);
+}
+
+.quem-somos .des-quem{
+    padding: 20px;
+    color: #131313;
+    text-align: left;
+    height: 100%;
+}
+
+.quem-somos .des-quem p{
+    font: size 2rem;
+    margin: 20px 0;
+}
+.quem-somos .des-quem h2{
+    padding: 2px;
+    font-size: 2.3rem;
+}
+.quem-somos button{
+    width: 30%;
+    height: 40px;
+    margin-top: 10px;
+    text-align: center;
+    border-radius: 50px;
+    color: green;
+    border: 1px solid rgb(0, 165, 36);
+    background-color: rgb(255, 255, 255);
+}
+
+.quem-somos button a{
+    text-decoration: none;
+    color: green;
+}
+
+.quem-somos button a:hover,
+.quem-somos button:hover{
+    background: rgb(0, 165, 36);
+
+}
+
+/* Diferenciais */
+section.diferenciais{
+	padding:30px 0;
+	text-align: center;
+}
+
+.icones-diferenciais{
+	margin-top: 0px;
+}
+
+.box-icone-single{
+    float: left;
+	width: 33.3%;
+    margin-bottom: 40px;
+    padding:0 10px;
+}
+
+.box-icone-single h2{
+    margin: 0 auto;
+    color: rgb(46, 46, 46);
+	font-size: 100px;
+}
+
+.box-icone-single p{
+	color: #646464;
+	font-weight: lighter;
+	font-size: 16px;
+}
+
+@media screen and (max-width: 768px){
+    main{
+        width: 100%;
+    }
+    .card-single{
+        width: 100%;
+    }
+    .box-icone-single{
+        width: 100%;
+    }
+
+    .quem-somos{
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .quem-somos button{
+        width: 95%;
+        margin: 0 auto;
+        padding: 0 2%;
+    }
+
+    .quem-somos img{
+        width: 100%;
+        position: relative;
+    }
+}
+
