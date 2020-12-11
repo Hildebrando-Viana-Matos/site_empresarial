@@ -19,7 +19,7 @@ body{
 
 /* Main */
 main{
-    width: 85%;
+    max-width: 1500px;
     background-color: rgb(253, 253, 253);
     border-radius: 30px 30px 0px 0px;
     margin: 0px auto;
@@ -38,14 +38,18 @@ section.cards{
 	padding:30px 0;
 }
 
+section.cards .container{
+    display: flex;
+}
+
 .card-single{
 	width: 33.3%;
-	float: left;
     padding:15px;
 }
 
 .card-single img{
     width: 100%;
+    height: 50%;
     border-radius: 10px;
 }
 
@@ -78,32 +82,30 @@ section.cards{
 .card-single button:hover{
  background: rgb(0, 204, 44);
 }
-.card-single button a:hover{
-    background: rgb(0, 204, 44);
-   }
-.quem-somos{
-    width: 95%;
-    height: 330px;
-    margin: 0 auto;
-    background-color: rgb(255, 255, 255);
-    display: inline-flex;
-    position: relative;
+
+.card-single button:focus{
+    outline: none;
 }
 
-.quem-somos img{
-    width: 410px;
-    height: 330px;
+.quem-somos .container{
+    max-width: 1100px;
+    padding: 0;
+    display: flex;
 }
 
-.quem-somos img-quem{
-    background: url(img/about-img.jpg);
+.quem-somos .img-quem{
+    width: 50%;
+    padding-top: 40%;
+    background-image: url(../img/logo.png);
+    background-size: 100% 100%;
+    background-position: center;
 }
 
 .quem-somos .des-quem{
     padding: 20px;
+    width: 50%;
     color: #131313;
     text-align: left;
-    height: 100%;
 }
 
 .quem-somos .des-quem p{
@@ -121,6 +123,7 @@ section.cards{
     text-align: center;
     border-radius: 50px;
     color: green;
+    cursor: pointer;
     border: 1px solid rgb(0, 165, 36);
     background-color: rgb(255, 255, 255);
 }
@@ -130,27 +133,26 @@ section.cards{
     color: green;
 }
 
-.quem-somos button a:hover,
 .quem-somos button:hover{
     background: rgb(0, 165, 36);
+}
 
+.quem-somos button:focus{
+    outline: none;
 }
 
 /* Diferenciais */
-section.diferenciais{
-	padding:30px 0;
-	text-align: center;
-}
 
-.icones-diferenciais{
-	margin-top: 0px;
+.diferenciais .container{
+    display: flex;
+    max-width: 900px;
+    flex-wrap: wrap;
 }
 
 .box-icone-single{
-    float: left;
-	width: 33.3%;
+    width: 33.3%;
+    text-align: center;
     margin-bottom: 40px;
-    padding:0 10px;
 }
 
 .box-icone-single h2{
@@ -169,17 +171,39 @@ section.diferenciais{
     main{
         width: 100%;
     }
+
+    section.cards .container{
+        flex-direction: column;
+    }
+
     .card-single{
         width: 100%;
     }
+
+    .card-single img{
+        height: 10%;
+    }
+
+    .diferenciais .container{
+        flex-direction: column;
+    }
+
     .box-icone-single{
         width: 100%;
     }
 
-    .quem-somos{
-        display: block;
+    .quem-somos .container{
+        flex-direction: column;
+    }
+
+    .quem-somos .img-quem{
+        padding-top: 70%;
+    }
+
+    .quem-somos .img-quem,
+    .quem-somos .des-quem{
         width: 100%;
-        height: auto;
+        margin: 0 auto;
     }
 
     .quem-somos button{
@@ -187,10 +211,4 @@ section.diferenciais{
         margin: 0 auto;
         padding: 0 2%;
     }
-
-    .quem-somos img{
-        width: 100%;
-        position: relative;
-    }
 }
-

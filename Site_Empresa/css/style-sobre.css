@@ -19,16 +19,14 @@ body{
 
 /* Descricao */
 main{
-    width: 85%;
+    max-width: 1500px;
     background-color: rgb(253, 253, 253);
     border-radius: 30px 30px 0px 0px;
     margin: 0px auto;
     margin-top: -60px;
-    padding: 10px;
 }
 /* quem somos */
 section.quem-somos .des-quem{
-    width: 70%;
     font-size: 20px;
     color: #999999;
     font-weight: 400;
@@ -37,28 +35,25 @@ section.quem-somos .des-quem{
 }
 .des-pag{
     text-align: center;
-    padding: 0px;
 }
+
 .des-pag h2{
     font-size: 40px;
     color: rgb(0, 0, 0);
     font-weight: 600;
 }
-.descricao{
-    width: 90%;
-    height: 500px;
-    margin-top: 2px;
-    display: inline-flex;
-}
+
 section.equipe{
 	padding: 40px 0;
 }
 
-.equipe-circles{
-    margin: 20px 0;
-	display: flex;
+section.equipe .des-pag{
+    margin-bottom: 20px;
+}
+
+section.equipe .container{
+    display: flex;
     flex-wrap: wrap;
-    color: gray;
 }
 
 .equipe-circle-single{
@@ -101,9 +96,10 @@ section.loja{
     padding: 30px 0;
 }
 
-section.loja > .center{
+section.loja .container{
     display: flex;
     flex-wrap: wrap;
+    max-width: 1440px;
 }
 
 .loja-wraper{
@@ -138,12 +134,15 @@ section.loja > .center{
     main{
         width: 100%;
     }
-    section.quem-somos{
-        width: 100%;
-    }
     section.equipe{
         width: 100%;
     }
+
+    section.equipe .container{
+        flex-direction: column;
+        align-items: center;
+    }
+
     .equipe-circle-single{
         width: 100%;
         margin-bottom: 20px;
@@ -151,6 +150,12 @@ section.loja > .center{
     section.quem-somos .des-quem{
         text-align: center;
     }
+
+    section.loja .container{
+        flex-direction: column;
+        align-items: center;
+    }
+
     .loja-wraper{
         width: 100%;
         max-width: 500px;
