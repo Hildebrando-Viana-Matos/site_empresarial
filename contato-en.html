@@ -82,51 +82,60 @@
             </div>
         </footer>
         
-            <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-            <script>
-                $(function(){
-                    $('form').submit(function(){
-                        var erro = false;
-                        var nome = $('[name=nome]').val();
-                        var email = $('[name=email]').val();
-                        var mensagem = $('[name=mensagem]').val();
-                        resetForm();
-                        if(nome == ''){
-                            erro = true;
-                            var el = $('[name=nome]');
-                            el.parent().find('span').html('Please enter your name.');
-                            el.css('border','2px solid red');
-                        }
-                        if(email == ''){
-                            erro = true;
-                            var el = $('[name=email]');
-                            el.parent().find('span').html('Please enter your e-mail.');
-                            el.css('border','2px solid red');
-                        }
-                        if(mensagem == ''){
-                            erro = true;
-                            var el = $('[name=mensagem]');
-                            el.parent().find('span').html('Please insert your message.');
-                            el.css('border','2px solid red');
-                        }
-        
-                        if(erro == false){
-                            $('.box-sucesso').fadeIn(function(){
-                                setTimeout(function(){
-                                    $('.box-sucesso').fadeOut();
-                                },5000);
-                            });
-                            $(this)[0].reset();
-                        }
-        
-                        return false;
-                    })
-        
-                    function resetForm(){
-                        $('input[type=text],textarea').css('border','1px solid #ccc');
-                        $('span').html('');
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script>
+            $(function(){
+                $('form').submit(function(){
+                    var erro = false;
+                    var nome = $('[name=nome]').val();
+                    var email = $('[name=email]').val();
+                    var mensagem = $('[name=mensagem]').val();
+                    resetForm();
+                    if(nome == ''){
+                        erro = true;
+                        var el = $('[name=nome]');
+                        el.parent().find('span').html('Please enter your name.');
+                        el.css('border','2px solid red');
                     }
+                    if(email == ''){
+                        erro = true;
+                        var el = $('[name=email]');
+                        el.parent().find('span').html('Please enter your e-mail.');
+                        el.css('border','2px solid red');
+                    }
+                    if(mensagem == ''){
+                        erro = true;
+                        var el = $('[name=mensagem]');
+                        el.parent().find('span').html('Please insert your message.');
+                        el.css('border','2px solid red');
+                    }
+    
+                    if(erro == false){
+                        $('.box-sucesso').fadeIn(function(){
+                            setTimeout(function(){
+                                $('.box-sucesso').fadeOut();
+                            },5000);
+                        });
+                        $(this)[0].reset();
+                    }
+    
+                    return false;
                 })
-            </script>
+    
+                function resetForm(){
+                    $('input[type=text],textarea').css('border','1px solid #ccc');
+                    $('span').html('');
+                }
+            })
+        </script>
+
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script>
+            $(function(){
+                $('nav.mobile h3').click(function(){
+                    $('nav.mobile ul').slideToggle();
+                })
+            })
+        </script>
 </body>
 </html>
